@@ -76,14 +76,14 @@ reboot
 etc/fstab
 
 ```javascript
-UUID=6E35-5356			/boot      vfat  defaults 0 0
+UUID=6E35-5356						/boot      vfat  defaults 0 0
 UUID=58e0df9f-3929-4240-a180-e4392d8f1526	/warehouse ext4  defaults 0 0
 ```
 
 # References
 
 * busybox 
-..* http://www.busybox.net/
+	* http://www.busybox.net/
 
 * ODROID-XU3 EVM board 
-..* http://www.hardkernel.com/main/products/prdt_info.php?g_code=G140448267127
+	* http://www.hardkernel.com/main/products/prdt_info.php?g_code=G140448267127
