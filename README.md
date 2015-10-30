@@ -4,13 +4,13 @@
 The document describes the Andbot auto upgrade OTA architecture and updrade mechanisam
 
 # Andbot auto upgrade OTA (A-OTA)
-The Andbot auto upgrade OTA (A-OTA) architecture include 3 parts; the Andbot App, Colud server, and upgrade system.
+The Andbot auto upgrade OTA (A-OTA) architecture include 3 parts; the Andbot app, colud server, and upgrade system.
 
-#### The A-OTA Architecture and work flow diagram.
+#### The A-OTA architecture and work flow diagram.
 ![A-OTA work flow](https://docs.google.com/drawings/d/1ckOrEvUkxI-c29folQL1CAE7msxt5V7eteUvdp-5i9A/pub?w=552&h=720)
 														
-# Andbot App
-The Andbot App is a background service application program. In A-OTA case, it provides functions as the below
+# Andbot app
+The Andbot app is a background service application program. In A-OTA case, it provides functions as the below
 * connecting and syncing up database to cloud server
 * check system and upgrade information
 * download and check upgrade files
@@ -18,7 +18,7 @@ The Andbot App is a background service application program. In A-OTA case, it pr
 * system power monitor
 * switch System to upgrade system 
 
-#### Andbot App work flow
+#### Andbot app work flow
 --TBD--
 
 # Cloud Server
@@ -34,7 +34,7 @@ There are some details and related information as the follows
 #### Major storage partitions(SD card/eMMC)
 ![SDcard partitions](https://docs.google.com/drawings/d/1yWVKoBfOmzN5G0ehQm-baXEqNDuhX32Q_PMMvmwtMic/pub?w=629&h=650)
 
-#### Busybox and Kernel config
+#### Busybox and Linux kernel config
 
 busybox config
 ```javascript
@@ -76,7 +76,7 @@ reboot
 etc/fstab
 
 ```javascript
-UUID=6E35-5356						/boot      vfat  defaults 0 0
+UUID=6E35-5356								/boot      vfat  defaults 0 0
 UUID=58e0df9f-3929-4240-a180-e4392d8f1526	/warehouse ext4  defaults 0 0
 ```
 
