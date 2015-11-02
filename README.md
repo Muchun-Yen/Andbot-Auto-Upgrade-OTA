@@ -66,10 +66,14 @@ etc/init.d/rcS
 ```javascript
 #!/bin/sh
 mount -a 
-date +" << upgrating system now... >> "
-dd if=/warehouse/trusty.img of=/dev/mmcblk0p2 bs=1M
+" << upgrating system now... >> "
+sync
+gzip -dc /warehouse/trusty.img.gz | dd of=/dev/mmcblk0p2 bs=1M
 sync
 cp /warehouse/BOOT/boot.ini /boot
+cp /warehouse/BOOT/exynos5422-odroidxu3.dtb /boot
+cp /warehouse/BOOT/uInitrd  /boot
+cp /warehouse/BOOT/zImage /boot
 sync
 reboot
 ```
@@ -77,8 +81,11 @@ etc/fstab
 
 ```javascript
 UUID=6E35-5356								/boot      vfat  defaults 0 0
-UUID=58e0df9f-3929-4240-a180-e4392d8f1526	/warehouse ext4  defaults 0 0
+UUID=88f52e33-8730-4943-81b0-f22292dd417b	/warehouse ext4  defaults 0 0
 ```
+
+
+
 
 # References
 
