@@ -34,6 +34,12 @@ There are some details and related information as the follows
 #### Major storage partitions(SD card/eMMC)
 ![SDcard partitions](https://docs.google.com/drawings/d/1yWVKoBfOmzN5G0ehQm-baXEqNDuhX32Q_PMMvmwtMic/pub?w=629&h=650)
 
+### modify the bootrootfs setting in boot.ini 
+[Normal]
+setenv bootrootfs "console=tty1 console=ttySAC2,115200n8 root=UUID=e139ce78-9841-40fe-8823-96a304a09859 rootwait ro"
+[Upgrade]
+setenv bootrootfs "console=tty1 console=ttySAC2,115200n8 root=LABEL=upgrade rootwait rw"
+
 #### Busybox and Linux kernel config
 
 busybox config
